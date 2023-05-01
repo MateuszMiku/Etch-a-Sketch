@@ -1,0 +1,14 @@
+#board {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 600px;
+    border: 3px solid black;
+}
+
+.square {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+}
