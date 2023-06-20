@@ -1,14 +1,16 @@
 #board {
     display: flex;
     flex-wrap: wrap;
-    width: 600px;
-    height: 600px;
-    border: 3px solid black;
+    width: 625px;
+    height: 625px;
 }
 
 .square {
     display: flex;
-    width: 30px;
-    height: 30px;
-    background-color: blue;
+    background-color: grey;
+}
+
+.square_activated {
+    display: flex;
+    background-color: rgb(97, 22, 22);
 }
