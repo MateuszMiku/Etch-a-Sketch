@@ -22,6 +22,15 @@ popup.onclick = function () {
         let squareAmount = squaresPerSide ** 2;
         createSquares(squareAmount);
 
+        function getRandomColor() {
+            let letters = '0123456789ABCDEF';
+            let color= '#'
+                for (let i = 0; i<6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+        }
+
         function createSquares(squareAmount){
 
             let squareWidth = (625 / squaresPerSide) + "px";
@@ -33,15 +42,11 @@ popup.onclick = function () {
                 square.style.width = squareWidth;
                 square.style.height = squareWidth;
                 board.appendChild(square);
-            }
-        
-        
-            
-            for (let i=0; i < squareAmount; i++) {
+
                 let squares = document.getElementsByClassName("square");
                 squares[i].onmouseover = function(){
                 this.setAttribute("class", "square_activated")
+                this.style.backgroundColor=getRandomColor();
             }}
         }}
-
 };
